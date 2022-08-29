@@ -6,27 +6,16 @@ import taeyeon from './assets/taeyeon.jpg';
 class Karina extends React.Component{
     constructor(props) {
         super(props);
-        this.state = {karina: 'dsa'};
+        this.state = {karina: 'aespa'};
     }
-    
-    //set state in class component
-    state = {phy:false};
-    clickCLS = () => { //= () => { is function() 
-        this.setState({ phy: !this.state.phy });
-    };
 
     render(){
         return (
-            <div className="sideA">
-                <img src={mainLogo} className="img-responsive img-center" alt='Karina'/>
-                <img src={iu} className="img-responsive img-center" alt='Karina'/>
-                <img src={taeyeon} className="img-responsive img-center" alt='Karina'/>
+            <div class="sideA">
+                <img src={mainLogo} className="img-responsive" alt='Karina'/>
+                <img src={iu} className="img-responsive" alt='Karina'/>
+                <img src={taeyeon} className="img-responsive" alt='Karina'/>
                 <p>{this.state.karina}</p>
-
-                <div className='faq'>
-                    <div className='quest' onClick={this.clickCLS}>ABCDE?</div>
-                    <div className={this.state.phy ? "onn answer" : "answer"}>12345.</div>
-                </div>
             </div>
         )
     }

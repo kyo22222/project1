@@ -1,25 +1,8 @@
 import React, {useRef, useEffect, useState} from 'react';
-//import './App.css';
-import Car from './Car';
-import Menu from './menu';
+import Karina from './Karina';
 
-// const handleScroll = event => {
-//   console.log('scrollTop: ', event.currentTarget.scrollTop);
-//   console.log('offsetHeight: ', event.currentTarget.offsetHeight);
-//   // if( event.currentTarget.scrollTop > 500){
-//   //   console.log("ASDDD");
-//   // }
-// }
-
-// function HandleScroll() {
-//   console.log('scrollTop: ', window.pageYOffset);
-//   console.log('offsetHeight: ', e.currentTarget.offsetHeight);
-// };
-
-//class App extends React.Component{
-function App() {
-
-  const [girl, setGirl] = useState("---");
+function Car() {
+    const [girl, setGirl] = useState("---");
     const boxRef = useRef();
     const [x, setX] = useState();
     const [y, setY] = useState();
@@ -42,6 +25,8 @@ function App() {
         //console.log(window.pageYOffset);
         //console.log(document.documentElement.scrollTop);
     };
+  
+    
 
     //const handleScroll = () => setGirl('Karina');
     //OR
@@ -55,13 +40,12 @@ function App() {
        document.addEventListener("scroll", getPosition);
     });
 
-  return (
-    <div class="App" onScroll={handleScroll} ref={boxRef}>
-      <p className='sticky'>X : {x} and Y(scrolltop) : {y} and {girl}</p>
-      <Menu className={isActive? 'scrolled up' : ''} ></Menu>
-      <Car></Car>
-  </div>
-  )
+    return (
+        <div class='theBOX' className={isActive? 'scrolled' : ''} onScroll={handleScroll} ref={boxRef}>
+            <Karina></Karina>
+            <p className='sticky'>X : {x} and Y(scrolltop) : {y} and {girl}</p>
+        </div>
+    )
 }
 
-export default App;
+export default Car;
