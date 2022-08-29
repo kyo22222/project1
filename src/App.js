@@ -19,7 +19,7 @@ import Menu from './menu';
 //class App extends React.Component{
 function App() {
 
-  const [girl, setGirl] = useState("---");
+    const [girl, setGirl] = useState("---");
     const boxRef = useRef();
     const [x, setX] = useState();
     const [y, setY] = useState();
@@ -56,8 +56,8 @@ function App() {
     });
 
   return (
-    <div class="App" onScroll={handleScroll} ref={boxRef}>
-      <p className='sticky'>X : {x} and Y(scrolltop) : {y} and {girl}</p>
+    <div className="App" onScroll={handleScroll} ref={boxRef}>
+      <p className='sticky'>X : {x} and Y(scrolltop) : {y} and {girl}<br/>Did u see me?</p>
       <Menu className={isActive? 'scrolled up' : ''} ></Menu>
       <Car></Car>
   </div>
