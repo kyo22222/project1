@@ -1,5 +1,5 @@
 import React, {useRef, useEffect, useState} from 'react';
-//import './App.css';
+import './App.css';
 import Car from './Car';
 import Menu from './menu';
 
