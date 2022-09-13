@@ -1,5 +1,4 @@
 import React, { useEffect, useState} from 'react';
-import Karina from './Karina';
 import './App.css';
 import {phoneArr} from './product_arr_220825';
 import tableSort from "table-sort-js/table-sort.js";
