@@ -70,7 +70,7 @@ function Menu(props) {
 
 			<ul className='menuu'>
               <li>
-                <NavLink to="">Home</NavLink>
+                <NavLink className="active" to="">Home</NavLink>
               </li>
               <li>
                 <NavLink to="/Karina">Karina</NavLink>
