@@ -1,4 +1,5 @@
 import React  from 'react';
+import { Outlet, NavLink } from "react-router-dom";
 
 function Menu(props) {
   return (
@@ -65,7 +66,20 @@ function Menu(props) {
 		<polygon class="st0" points="214,212.7 214,198.6 208.7,198.6 208.7,195.9 222.2,195.9 222.2,198.6 217,198.6 217,212.7 	"/>
 		</g>
 			</svg>
-		</div>
+			</div>
+
+			<ul className='menuu'>
+              <li>
+                <NavLink to="">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Karina">Karina</NavLink>
+              </li>
+              <li>
+                <NavLink to="/Car">Car</NavLink>
+              </li>
+            </ul>
+			<Outlet />
 	</div>
   );
 }

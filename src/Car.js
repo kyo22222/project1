@@ -37,6 +37,11 @@ function Car() {
         //console.log(e.target.innerText);
         setCate(txt);
     }
+    function ifPHONE(wd){
+        if(wd.includes('iPhone')){
+            return true;
+        }
+    }
     const filtered = phoneArr.filter(products => {
         if(catee !== ''){
             return products.brand === catee;
@@ -49,9 +54,6 @@ function Car() {
     return (
        
         <div className="theBOX">            
-            <Karina></Karina>
-
-        <hr/>
 
         <Swiper id="theSWI"
         spaceBetween={0}
@@ -71,7 +73,7 @@ function Car() {
             <SwiperSlide zoom key={i} className="">
             <img src={image} key={i} alt="product" className="rounded-lg" />
             </SwiperSlide>
-        ))}
+        ))}  
     </Swiper>
         <hr/>
 
@@ -84,7 +86,7 @@ function Car() {
                 <tbody>
                     {filtered.map(products => {
                         return (
-                            <tr data-title={products.key}><td>{products.brand}</td><td>{products.prodname_e}</td><td>{products.srp}</td></tr>
+                            <tr data-title={products.key}><td>{products.brand}</td><td className={ifPHONE(products.prodname_e)? 'iphone_ed' : ''}>{products.prodname_e}</td><td>{products.srp}</td></tr>
                         );
                     })}
                 </tbody>

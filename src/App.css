@@ -16,6 +16,27 @@
   width: 320px;
 }
 
+.menuu{
+  padding: 0;
+  margin: 0;
+}
+.menuu li{
+  display: inline-block;  
+}
+.menuu li a{
+  padding: 5px;
+  background-color: #fd0;
+  transition: all 0.3s ease;
+  display: block;
+}
+.menuu li a.active{
+  transform: rotate(-3deg);
+}
+
+.iphone_ed{
+  background-color: chartreuse;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
