@@ -1,7 +1,9 @@
 import React, {useRef, useEffect, useState} from 'react';
+import { BrowserRouter as Router,Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import Car from './Car';
 import Menu from './menu';
+import Karina from './Karina';
 
 // const handleScroll = event => {
 //   console.log('scrollTop: ', event.currentTarget.scrollTop);
@@ -56,11 +58,20 @@ function App() {
     });
 
   return (
+    <Router>
     <div className="App" onScroll={handleScroll} ref={boxRef}>
       <p className='sticky'>X : {x} and Y(scrolltop) : {y} and {girl}<br/>Did u see me?</p>
       <Menu className={isActive? 'scrolled up' : ''} ></Menu>
-      <Car></Car>
+      
+
+      <Routes>
+        <Route exact path='' element={< Karina />}></Route>
+        <Route exact path='/Karina' element={< Karina />}></Route>
+        <Route exact path='/Car' element={< Car />}></Route>
+      </Routes>
+
   </div>
+  </Router>
   )
 }
 
